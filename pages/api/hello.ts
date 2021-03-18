@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface Data {
-  name: string;
-}
-
-export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json({ name: "John Doe" });
 };
+
+export default handler;
